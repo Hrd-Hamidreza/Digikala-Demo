@@ -1,0 +1,81 @@
+.header {
+  &__main {
+    height: 20rem;
+    box-shadow: 0 0 1rem $black-dark;
+    &-banner {
+    }
+    &-content {
+      &-top {
+        &-right {
+        }
+        &-img {
+        }
+        &-search {
+          @include responsive(found) {
+            width: 50vw;
+          }
+          @include responsive(phonexl) {
+            width: 39vw;
+          }
+          & > input#searchinput {
+            outline: none;
+          }
+          & > .icon {
+            cursor: pointer;
+          }
+        }
+        &-left {
+          & > a#signbuybtn {
+          }
+        }
+      }
+      &-bottom {
+        &-right {
+        }
+        &-list {
+          & > li {
+            height: 100%;
+            &:first-child {
+              cursor: pointer;
+            }
+          }
+          & a {
+            position: relative;
+            height: 100%;
+            cursor: pointer;
+            color: $black-dark;
+            font-size: 1.2rem;
+            &:hover {
+              &::after {
+                content: "";
+                width: 100%;
+                height: 0.2rem;
+                background-color: $red;
+                position: absolute;
+                bottom: 0;
+                transition: all 5s ease-in-out; /*-!doesnt work*/
+              }
+            }
+          }
+        }
+        &-left {
+          cursor: pointer;
+          &:hover:after {
+            content: "لطفا شهر خود را انتخاب کنید";
+            width: 100%;
+            position: absolute;
+            bottom: -3.5rem;
+            background-color: $gray;
+            color: $white;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            transition: all 5s ease; /*-!doesnt work*/
+          }
+        }
+      }
+    }
+  }
+  &__spacing {
+    height: 20rem;
+  }
+}

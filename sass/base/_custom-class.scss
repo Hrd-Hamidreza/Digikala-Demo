@@ -1,0 +1,32 @@
+//!------------------------------ Flex Class ---------------------------------------------------
+//*---------------------------- Flex row Class --------------------------------------------------
+.flex-row-center {
+  @include centerizetag();
+}
+.flex-row-between {
+  @include centerizetag($align: center, $justify: space-between);
+}
+//*--------------------------- Flex column Class ------------------------------------------------
+.flex-column-center {
+  @include centerizetag($column: column);
+}
+.flex-column-between {
+  @include centerizetag($justify: space-between, $column: column);
+}
+//!----------------------------- Position Class -------------------------------------------------
+.position-center {
+  @include centerizebox();
+}
+//!------------------------------ line limitness ------------------------------------------------
+.ellipsis-1 {
+  @include linelimitness(1);
+}
+.ellipsis-2 {
+  @include linelimitness(2);
+}
+.ellipsis-3 {
+  @include linelimitness(3);
+}
+.ellipsis-4 {
+  @include linelimitness(4);
+}

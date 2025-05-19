@@ -1,0 +1,38 @@
+.club {
+  &__main {
+    border-radius: 0;
+    @include responsive(laptop) {
+      border-radius: 2rem;
+    }
+    &-brand {
+      @include responsive(tabletlg) {
+        width: 25%;
+      }
+      cursor: pointer;
+      & > img {
+        width: 11.9rem;
+        height: 3.3rem;
+      }
+    }
+    &-items {
+      width: 100%;
+      @include responsive(tabletlg) {
+        width: 75%;
+      }
+      & > a {
+        cursor: pointer;
+        & > div:first-child {
+          & > span:last-child {
+            white-space: nowrap;
+          }
+        }
+        & > div:last-child {
+          & > img {
+            width: 16.8rem !important;
+            height: 6rem !important;
+          }
+        }
+      }
+    }
+  }
+}

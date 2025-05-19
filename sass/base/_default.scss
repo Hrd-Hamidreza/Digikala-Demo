@@ -1,0 +1,76 @@
+html {
+  font-size: $default-font;
+  @include responsive(found) {
+    font-size: 40%;
+  }
+  @include responsive(phonesm) {
+    font-size: 50%;
+  }
+  @include responsive(phonemd) {
+    font-size: 50%;
+  }
+  @include responsive(phonelg) {
+    font-size: 50%;
+  }
+  @include responsive(phonexl) {
+    font-size: 56%;
+  }
+  @include responsive(tablet) {
+    font-size: 56%;
+  }
+  @include responsive(tabletlg) {
+    font-size: 55%;
+  }
+  @include responsive(laptop) {
+    font-size: 62.5%;
+  }
+  @include responsive(desktop) {
+    font-size: 70%;
+  }
+}
+:root {
+  --bs-body-bg: white;
+}
+svg {
+  font-size: 1.5rem;
+}
+body {
+  direction: rtl;
+  --bs-body-font-size: $default-font;
+  --bs-body-font-weight: normal;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: rgb(12, 12, 12);
+  --bs-body-font-family: "DigiKala", "sans-seif" !important;
+}
+* {
+  text-transform: capitalize;
+  text-decoration: none !important;
+}
+ul,
+li,
+ol {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+p,
+hr,
+td,
+th,
+tr,
+table,
+mark,
+button {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+pre {
+  font-family: $font-digikala, "sans-serif" !important;
+}

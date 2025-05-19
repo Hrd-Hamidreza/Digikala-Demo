@@ -1,0 +1,54 @@
+.device2 {
+  &__main {
+    border-radius: 0;
+    @include responsive(laptop) {
+      border-radius: 2rem;
+    }
+    &-content {
+      &:first-child {
+        border-bottom: 1px solid rgb(192, 194, 197);
+        @include responsive(tabletlg) {
+          border-bottom: 0;
+        }
+      }
+      &:nth-child(2) {
+        border-bottom: 1px solid rgb(192, 194, 197);
+        border-right: 0;
+        @include responsive(phonexl) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+        @include responsive(tabletlg) {
+          border-bottom: 0;
+        }
+      }
+      &:nth-child(3) {
+        border-right: 0;
+        border-bottom: 1px solid rgb(192, 194, 197);
+        @include responsive(phonexl) {
+          border-bottom: 0;
+        }
+        @include responsive(tabletlg) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+      }
+      &:nth-child(4) {
+        border-right: 0;
+        @include responsive(phonexl) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+      }
+      &-top {
+        & > pre {
+          & > mark {
+            background-color: unset;
+            font-weight: lighter;
+          }
+        }
+      }
+      &-middle {
+      }
+      &-bottom {
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.discount {
+  &__main {
+    & > div {
+      &:first-child {
+      }
+      &:last-child {
+        height: 30rem;
+      }
+    }
+    border-radius: 0;
+    @include responsive(laptop) {
+      border-radius: 2rem;
+    }
+    & > div {
+      &:first-child {
+      }
+      &:last-child {
+      }
+    }
+    &-content {
+      cursor: grab;
+      &-item {
+        width: 16rem;
+        & > div {
+          &:first-child {
+            &.last {
+              & > a:first-child {
+                width: 5.2rem;
+                height: 5.2rem;
+              }
+            }
+          }
+          &:last-child {
+            & > span {
+              &:last-child {
+              }
+            }
+          }
+        }
+        & > a {
+        }
+      }
+    }
+  }
+}

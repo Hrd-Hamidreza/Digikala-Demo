@@ -1,0 +1,32 @@
+.sellers {
+  &__main {
+    border: 0;
+    border-radius: 0;
+    @include responsive(laptop) {
+      border-radius: 2rem;
+      border: 1px solid rgb(192, 194, 197);
+    }
+    &-head {
+      & > div:first-child {
+      }
+      & > a:last-child {
+        @include centerizebox();
+        right: unset;
+      }
+    }
+    &-content {
+      & ol {
+        min-width: 25rem;
+        max-width: 27.5rem;
+        & > li {
+          & > a {
+            & > div:first-child {
+              & > img {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

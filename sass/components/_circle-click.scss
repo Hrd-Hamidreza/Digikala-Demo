@@ -1,0 +1,13 @@
+.digi-button-slide {
+  width: 4rem;
+  height: 4rem;
+  @include centerizetag();
+  color: white;
+  background-color: black;
+  font-weight: bolder;
+  border-radius: 100%;
+  &::after {
+    content: "";
+    font-size: 1.5rem;
+  }
+}

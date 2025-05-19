@@ -1,0 +1,31 @@
+.amazing {
+  background: url(../../public/images/Amazing/bg.svg) no-repeat;
+  border-radius: 0;
+  @include responsive(laptop) {
+    border-radius: 2rem;
+  }
+  &__main {
+    &-right {
+      & > span:last-child {
+        white-space: nowrap;
+      }
+    }
+    &-left {
+      & > ul:first-child {
+        & > li {
+          & > a {
+            min-width: 8rem;
+            min-height: 8rem;
+            max-width: 12rem;
+            max-height: 12rem;
+            & > img {
+            }
+          }
+        }
+      }
+      & > a:last-child {
+        white-space: nowrap;
+      }
+    }
+  }
+}

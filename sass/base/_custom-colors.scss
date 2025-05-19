@@ -1,0 +1,52 @@
+//*------------------------------------------------- primary Colors --------------------------------------------------
+$red: rgb(239, 57, 78);
+$red-light: rgb(239, 64, 86);
+$white-matalic: rgb(253, 236, 245);
+$white: rgb(255, 255, 255);
+$white-lighter: rgb(240, 240, 241);
+$red-dark: rgb(211, 47, 47);
+$pink: rgb(224, 62, 151);
+$blue: rgb(0, 0, 238);
+$gray: rgb(63, 64, 100);
+$blue-dark: rgb(35, 37, 78);
+$blue-darker: rgb(8, 122, 157);
+$light: rgb(161, 163, 168);
+$blue-light: rgb(60, 75, 109);
+$black-dark: rgb(98, 102, 109);
+$blue-lighter: rgb(25, 191, 211);
+$green: rgb(57, 174, 0);
+$black-darker: rgb(12, 12, 12);
+$white-dark: rgb(224, 224, 226);
+$white-light: rgb(192, 194, 197);
+$black-light: rgb(129, 133, 139);
+$black: rgb(0, 0, 0);
+$gold: rgb(249, 188, 0);
+$purple: rgb(183, 18, 147);
+$black-lighter: rgb(66, 71, 80);
+$custom-colors: (
+  "primary": $red,
+  "secondary": $red-light,
+  "tertiary": $white-matalic,
+  "dominentbg": $white,
+  "dominentbg2": $white-lighter,
+  "discount1": $red-dark,
+  "info": $pink,
+  "info2": $purple,
+  "advertising": $blue,
+  "title": $gray,
+  "advertising2": $blue-dark,
+  "club": $blue-darker,
+  "subtitle": $light,
+  "headline": $blue-light,
+  "itemstitle": $black-dark,
+  "select": $blue-lighter,
+  "discount2": $green,
+  "explanationtitle": $black-darker,
+  "explanationanswer": $white-dark,
+  "endpart": $white-light,
+  "faq": $black-light,
+  "brands": $black,
+  "star": $gold,
+  "footer2": $black-lighter,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);

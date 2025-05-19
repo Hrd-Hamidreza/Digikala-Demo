@@ -1,0 +1,45 @@
+.suggest {
+  &__main {
+    &-head {
+    }
+    &-table {
+      &-body {
+        &:first-child {
+          border-radius: 0;
+          @include responsive(laptop) {
+            border-radius: 0 2rem 0 0;
+          }
+        }
+        &:nth-child(6) {
+          border-radius: 0;
+          @include responsive(laptop) {
+            border-radius: 2rem 0 0 0;
+          }
+        }
+        &:nth-child(7) {
+          border-radius: 0;
+          @include responsive(laptop) {
+            border-radius: 0 0 2rem 0;
+          }
+        }
+        &:last-child {
+          border-radius: 0;
+          @include responsive(laptop) {
+            border-radius: 0 0 0 2rem;
+          }
+        }
+        & > a {
+          cursor: pointer;
+          & > div:first-child {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+        & > tr {
+          & > td {
+          }
+        }
+      }
+    }
+  }
+}

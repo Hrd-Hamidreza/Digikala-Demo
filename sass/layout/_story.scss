@@ -1,0 +1,29 @@
+.story {
+  &__swiper {
+    &-wrapper {
+      & > div {
+        @include responsive(found) {
+          width: 11rem;
+        }
+        @include responsive(phonexl) {
+          width: 9rem;
+        }
+      }
+      &-items {
+      }
+      &-item {
+        & > img {
+        }
+      }
+      &-itemstext {
+        @include centerizetag();
+        width: 100%;
+        & > span {
+          width: 100%;
+          text-align: center;
+          @include linelimitness(2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.popular {
+  &__main {
+    border-radius: 0;
+    @include responsive(laptop) {
+      border-radius: 2rem;
+    }
+    &-head {
+      & > div {
+        & > .icon {
+        }
+      }
+    }
+    &-list {
+      & > div {
+        & > ul {
+          & > li {
+            all: unset;
+            & > a {
+              & > img {
+                max-width: 10rem !important;
+                height: 10rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

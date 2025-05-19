@@ -1,0 +1,70 @@
+.device {
+  border-radius: 0;
+  @include responsive(laptop) {
+    border-radius: 2rem;
+  }
+  &__main {
+    &-content {
+      &:first-child {
+        border-bottom: 1px solid rgb(192, 194, 197);
+        @include responsive(tabletlg) {
+          border-bottom: 0;
+        }
+      }
+      &:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid rgb(192, 194, 197);
+        @include responsive(phonexl) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+        @include responsive(tabletlg) {
+          border-bottom: 0;
+        }
+      }
+      &:nth-child(3) {
+        border: 0;
+        border-bottom: 1px solid rgb(192, 194, 197);
+        @include responsive(phonexl) {
+          border-bottom: 0;
+        }
+        @include responsive(tabletlg) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+      }
+      &:nth-child(4) {
+        border-right: 0;
+        @include responsive(phonexl) {
+          border-right: 1px solid rgb(192, 194, 197);
+        }
+      }
+      &-top {
+      }
+      &-bottom {
+        & > div:first-child {
+          & > a {
+            cursor: pointer;
+            &:first-child {
+              border-left: 0.1rem solid rgb(224, 224, 226);
+              border-bottom: 0.1rem solid rgb(224, 224, 226);
+            }
+            &:nth-child(2) {
+              border-bottom: 0.1rem solid rgb(224, 224, 226);
+            }
+            &:nth-child(3) {
+              border-left: 0.1rem solid rgb(224, 224, 226);
+            }
+            &:last-child {
+            }
+            & > img {
+            }
+          }
+        }
+        & > div:last-child {
+          & > a {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

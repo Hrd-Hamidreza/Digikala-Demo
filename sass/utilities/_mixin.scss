@@ -1,0 +1,115 @@
+@mixin centerizetag($justify: center, $align: center, $column: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $column;
+}
+@mixin centerizebox() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}
+@mixin linelimitness($linenumber, $aim: vertical) {
+  display: -webkit-box;
+  -webkit-line-clamp: $linenumber;
+  -webkit-box-orient: $aim;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+//!---------------------------------------------- Responsive Design --------------------------------------------------
+
+@mixin responsive($breakpoint) {
+  //!-------------------------------------- 0 px-288 px = found (0 em) ------------------------------------------
+  //*-------------------------------------------------- found ------------------------------------------------------
+
+  @if $breakpoint==found {
+    @media only screen and (min-width: 0) {
+      @content;
+    }
+  }
+  //!-------------------------------------- 288 px-384 px = Phone sm (18 em) ------------------------------------------
+  //*-------------------------------------------------- phonesm -------------------------------------------------------
+
+  @if $breakpoint==phonesm {
+    @media only screen and (min-width: 18em) {
+      @content;
+    }
+  }
+
+  //!-------------------------------------- 384 px-480 px = Phone md (24 em) -----------------------------------------
+  //*-------------------------------------------------- phonemd -------------------------------------------------------
+
+  @if $breakpoint==phonemd {
+    @media only screen and (min-width: 24em) {
+      @content;
+    }
+  }
+
+  //!---------------------------------------- 480 px-576 px = Phone lg (30 em) ----------------------------------------
+  //*------------------------------------------------- phonelg  ------------------------------------------------------
+
+  @if $breakpoint==phonelg {
+    @media only screen and (min-width: 30em) {
+      @content;
+    }
+  }
+
+  //!------------------------------------ 576 px-768 px = Phone Landscape (36 em) sm ----------------------------------
+  //*-------------------------------------------------- phonexl --------------------------------------------------
+
+  @if $breakpoint==phonexl {
+    @media only screen and (min-width: 36em) {
+      @content;
+    }
+  }
+
+  //!------------------------------------ 768 px-992 px = Tablet Portrate (48 em) md ----------------------------------
+  //*-------------------------------------------------- tablet -------------------------------------------------------
+
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  //!----------------------------------- 992 px-1200 px = Tablet Landscape (62 em) lg ---------------------------------
+  //*-------------------------------------------------- tabletlg --------------------------------------------------
+
+  @if $breakpoint==tabletlg {
+    @media only screen and (min-width: 62em) {
+      @content;
+    }
+  }
+
+  //!--------------------------------------- 1200 px-1800 px = Laptop (75 em) xl --------------------------------------
+  //*---------------------------------------------------- laptop ------------------------------------------------------
+
+  @if $breakpoint==laptop {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+
+  //!------------------------------*------ 1400 px - 1800 px = Desktop (87.5 em) xxl ---------------------------------
+  //*--------------------------------------------------- desktop -----------------------------------------------------
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 87.5em) {
+      @content;
+    }
+  }
+  //!------------------------------------- 1800 px > = Big Desktop (112.5 em) xxxl -----------------------------------
+  //*--------------------------------------------------- desktopbg ---------------------------------------------------
+
+  @if $breakpoint==desktopbg {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
